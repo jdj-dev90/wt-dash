@@ -28,19 +28,19 @@ Refreshes every 5s (`--interval`). CI data is cached by `wt`, so polling is chea
 
 ## Keys
 
-| Key | Action |
-|---|---|
-| `↑↓` / `jk`, `g` / `G` | Move |
-| `enter` | Open the worktree's tmux session (via `tmux-sessionizer`) |
-| `n` | New worktree in the selected repo (`wt switch --create`, then open its session) |
-| `x` | Remove worktree + branch (`wt remove`, which refuses unmerged branches) |
-| `d` | Diff since the branch left the default branch, committed and uncommitted, in git's pager |
-| `o` | Open the MR/PR in the browser |
-| `r` | Refresh now |
-| `?` | All keys |
-| `q` | Quit |
+| Key                    | Action                                                                                   |
+| ---------------------- | ---------------------------------------------------------------------------------------- |
+| `↑↓` / `jk`, `g` / `G` | Move                                                                                     |
+| `enter`                | Open the worktree's tmux session (via `tmux-sessionizer`)                                |
+| `n`                    | New worktree in the selected repo (`wt switch --create`, then open its session)          |
+| `x`                    | Remove worktree + branch (`wt remove`, which refuses unmerged branches)                  |
+| `d`                    | Diff since the branch left the default branch, committed and uncommitted, in git's pager |
+| `o`                    | Open the MR/PR in the browser                                                            |
+| `r`                    | Refresh now                                                                              |
+| `?`                    | All keys                                                                                 |
+| `q`                    | Quit                                                                                     |
 
-**Second monitor:** when the dashboard runs in its own tmux session, `enter`/`n` switch the *most recently active other* tmux client, so sessions open on your main screen instead of replacing the dashboard. This is passed to `tmux-sessionizer` as `TMUX_SESSIONIZER_CLIENT`.
+**Second monitor:** when the dashboard runs in its own tmux session, `enter`/`n` switch the _most recently active other_ tmux client, so sessions open on your main screen instead of replacing the dashboard. This is passed to `tmux-sessionizer` as `TMUX_SESSIONIZER_CLIENT`.
 
 ## Repo list
 
@@ -76,3 +76,7 @@ go run . --interval 2s ~/code/work/acme
 ```
 
 Built with [Bubble Tea](https://github.com/charmbracelet/bubbletea) and [Lip Gloss](https://github.com/charmbracelet/lipgloss). Colours follow the Kanagawa palette.
+
+## License
+
+[MIT](LICENSE)
